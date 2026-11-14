@@ -1,0 +1,13 @@
+section#journal.section.container
+  h2.section-title= 'From the journal'
+  p.section-intro= 'Notes on process, case studies and things that inspire us.'
+  .journal-grid
+    each entry in journal
+      article.journal-card
+        +picture(entry.image, entry.alt, 300, 300, true, '96px')
+        div
+          p.meta= entry.meta
+          h3
+            a(href=entry.href)= entry.title
+          p= entry.description
+          a.read-more(href=entry.href) Read more >

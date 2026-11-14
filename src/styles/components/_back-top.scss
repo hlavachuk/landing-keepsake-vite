@@ -1,0 +1,18 @@
+.back-top {
+  position: fixed;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-radius: var(--round);
+  z-index: 15;
+}
+
+.back-top:hover {
+  background: var(--color-accent-hover);
+}

@@ -1,0 +1,18 @@
+section.section.container.clients
+  h2.section-title= 'Clients & kind words'
+  p.section-intro= 'Some of the teams that trusted us with their brands.'
+  .client-logos(role='group', aria-label='Client logos')
+    each client in clients
+      span= client.name
+  figure.testimonial
+    span.quote-mark(aria-hidden='true')= '“'
+    blockquote= 'Keepsake turned a vague brief into a brand we are proud of. The team was fast, honest about trade-offs and obsessed with the details.'
+    figcaption
+      span.avatar(aria-hidden='true')= 'OM'
+      span.testimonial-author
+        strong= 'Olena Marchenko'
+        small= 'Marketing Lead, Nordly'
+      .slider-dots(aria-hidden='true')
+        span.selected
+        span
+        span

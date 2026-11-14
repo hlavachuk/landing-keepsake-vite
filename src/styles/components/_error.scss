@@ -1,0 +1,9 @@
+.error {
+  display: none;
+  color: var(--color-accent);
+  font-size: var(--nav-size);
+}
+
+input:user-invalid ~ .error {
+  display: block;
+}

@@ -1,0 +1,15 @@
+.section-title {
+  font: 400 var(--section-size) / 1.5 var(--font-heading);
+  letter-spacing: var(--section-tracking);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.section-title::after {
+  content: '';
+  width: var(--section-mark);
+  height: var(--mark-height);
+  background: var(--color-accent);
+}

@@ -1,0 +1,13 @@
+.favourite {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.favourite:hover {
+  background: var(--color-accent-hover);
+}

@@ -1,0 +1,52 @@
+$colors: (
+  'accent': #f95858,
+  'accent-hover': #e44646,
+  'teal': #2cd5c4,
+  'text-dark': #3a3a3c,
+  'text': #666a6e,
+  'muted': #9aa0a6,
+  'bg-light': #f0f3f4,
+  'border': #e1e5e8,
+  'footer': #2a2a2d,
+  'overlay': rgb(30 32 36 / 82%),
+  'white': #fff,
+);
+$font-heading: 'Oswald', sans-serif;
+$font-body: 'Open Sans', sans-serif;
+$font-logo: 'Dancing Script', cursive;
+$section-space: 56px;
+$gutter: 20px;
+$header-height: 76px;
+$container: 1100px;
+$grid-gap: 12px;
+$hero-size: 26px;
+$cta-size: 22px;
+$quote-size: 16px;
+$stat-size: 38px;
+$nav-size: 12px;
+$logo-size: 22px;
+$logo-circle: 34px;
+$service-circle: 72px;
+$preview-size: 96px;
+$space-xs: 8px;
+$space-sm: 12px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-2xl: 40px;
+$space-3xl: 48px;
+$heading-tracking: 3px;
+$section-tracking: 1.5px;
+$ui-tracking: 1px;
+$section-size: 18px;
+$body-size: 14px;
+$body-leading: 22px;
+$section-mark: 16px;
+$mark-height: 2px;
+$round: 50%;
+$transition: 180ms ease;
+$focus-width: 3px;
+$breakpoints: (
+  md: 768px,
+  lg: 1280px,
+);

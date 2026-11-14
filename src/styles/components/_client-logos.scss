@@ -1,0 +1,22 @@
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl) 0;
+  padding-block: var(--space-2xl);
+  color: var(--color-muted);
+}
+
+.client-logos span {
+  flex: 0 0 50%;
+  text-align: center;
+  font:
+    700 19px / 1.4 Georgia,
+    serif;
+}
+
+.client-logos span:nth-child(2n) {
+  font: 700 var(--section-size) / 1.4 var(--font-heading);
+  letter-spacing: var(--section-tracking);
+}

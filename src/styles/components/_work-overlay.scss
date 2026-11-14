@@ -1,0 +1,17 @@
+.work-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: var(--color-overlay);
+  color: var(--color-white);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.work-overlay strong {
+  font: 400 var(--section-size) / 1.5 var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: var(--ui-tracking);
+}

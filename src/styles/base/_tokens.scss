@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  --font-heading: #{$font-heading};
+  --font-body: #{$font-body};
+  --font-logo: #{$font-logo};
+  --section-space: #{$section-space};
+  --gutter: #{$gutter};
+  --header-height: #{$header-height};
+  --container: #{$container};
+  --grid-gap: #{$grid-gap};
+  --hero-size: #{$hero-size};
+  --cta-size: #{$cta-size};
+  --quote-size: #{$quote-size};
+  --stat-size: #{$stat-size};
+  --nav-size: #{$nav-size};
+  --logo-size: #{$logo-size};
+  --logo-circle: #{$logo-circle};
+  --service-circle: #{$service-circle};
+  --preview-size: #{$preview-size};
+  --space-xs: #{$space-xs};
+  --space-sm: #{$space-sm};
+  --space-md: #{$space-md};
+  --space-lg: #{$space-lg};
+  --space-xl: #{$space-xl};
+  --space-2xl: #{$space-2xl};
+  --space-3xl: #{$space-3xl};
+  --heading-tracking: #{$heading-tracking};
+  --section-tracking: #{$section-tracking};
+  --ui-tracking: #{$ui-tracking};
+  --section-size: #{$section-size};
+  --body-size: #{$body-size};
+  --body-leading: #{$body-leading};
+  --section-mark: #{$section-mark};
+  --mark-height: #{$mark-height};
+  --round: #{$round};
+  --transition: #{$transition};
+  --focus-width: #{$focus-width};
+  --border: 1px solid var(--color-border);
+}

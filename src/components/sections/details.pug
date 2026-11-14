@@ -1,0 +1,46 @@
+each work, i in works
+  section.detail-panel(
+    id=`project-${i + 1}`,
+    aria-labelledby=`project-title-${i + 1}`,
+    tabindex='-1'
+  )
+    .detail-content
+      a.close-detail(href='#works', aria-label='Close project')
+        +icon('close')
+      +picture(
+        work.image,
+        work.alt,
+        720,
+        570,
+        true,
+        '(min-width: 768px) 720px, 90vw',
+      )
+      p.eyebrow #{ work.label } / Selected work
+      h2(id=`project-title-${i + 1}`)= work.title
+      p A study in thoughtful composition, considered details, and a distinctive visual identity. An illustrative project for this educational portfolio.
+      +btn('Let’s make something together', '#contact', 'primary')
+each entry, i in journal
+  article.detail-panel(
+    id=`article-${i + 1}`,
+    aria-labelledby=`article-title-${i + 1}`,
+    tabindex='-1'
+  )
+    .detail-content
+      a.close-detail(href='#journal', aria-label='Close article')
+        +icon('close')
+      p.eyebrow Studio journal / Design
+      h2(id=`article-title-${i + 1}`)= entry.detailTitle
+      p Every meaningful project starts with observation. We listen, collect references, and ask what a design needs to communicate before deciding how it should look.
+      p By choosing a clear typographic hierarchy, a focused palette, and generous space, we give ideas room to breathe. The result is work that feels calm, purposeful, and easy to use.
+      a(href='#journal') Back to the journal
+section#favourites.detail-panel(
+  aria-labelledby='favourites-title',
+  tabindex='-1'
+)
+  .detail-content
+    a.close-detail(href='#works', aria-label='Close favourites')
+      +icon('close')
+    h2#favourites-title= 'A few of our favourites'
+    p= 'Start with Mock-up Tag and Piece Paper — two projects we especially loved making.'
+    a(href='#project-1')= 'Mock-up Tag →'
+    a(href='#project-2')= 'Piece Paper →'

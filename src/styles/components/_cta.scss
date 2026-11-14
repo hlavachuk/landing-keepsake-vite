@@ -1,0 +1,11 @@
+.cta {
+  text-align: center;
+  padding-top: var(--section-space);
+}
+
+.cta h2 {
+  font: 300 var(--cta-size) / 1.4 var(--font-heading);
+  letter-spacing: var(--heading-tracking);
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+}

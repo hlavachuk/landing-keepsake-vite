@@ -1,4 +1,22 @@
-header.header
-    .header-inner
-        include logo
-        include navigation
+header.site-header
+  .container.header-inner
+    a.logo(href='#home', aria-label='Keepsake home')
+      span
+        +icon('logo')
+      = 'Keepsake'
+    nav.desktop-nav(aria-label='Main navigation')
+      each item, i in navigation
+        a(
+          href=item.href,
+          class={ active: i === 0 },
+          aria-current=i === 0 ? 'page' : null
+        )= item.label
+      a.favourite(href='#favourites', aria-label='Favourites')
+        +icon('heart')
+    button.menu-toggle(
+      type='button',
+      popovertarget='mobile-menu',
+      aria-controls='mobile-menu',
+      aria-label='Open navigation'
+    )
+      +icon('menu')

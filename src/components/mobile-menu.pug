@@ -1,0 +1,32 @@
+#mobile-menu.mobile-menu(popover)
+  .mobile-menu-head
+    a.logo(href='#home')
+      span
+        +icon('logo')
+      = 'Keepsake'
+    button(
+      type='button',
+      popovertarget='mobile-menu',
+      popovertargetaction='hide',
+      aria-label='Close navigation',
+      aria-controls='mobile-menu'
+    )
+      +icon('close')
+  nav(aria-label='Mobile navigation')
+    each item, i in navigation
+      a(
+        href=item.href,
+        class={ active: i === 0 },
+        aria-current=i === 0 ? 'page' : null
+      )= item.label
+  .menu-actions
+    a.button.primary(href='#contact')= 'Contact us'
+    +btn('', '#favourites', 'secondary')
+      +icon('heart')
+      | Favourites
+  p= 'Let’s make something memorable.'
+  a(href='mailto:hello@keepsake.example')= 'hello@keepsake.example'
+  .socials
+    each social in socials
+      a(href=social.href, aria-label=social.label)
+        +icon(social.icon)

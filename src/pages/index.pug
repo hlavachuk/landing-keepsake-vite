@@ -1,19 +1,30 @@
-extends ../layouts/main
+extends ../layouts/main.pug
 
-block fonts
-    include ../includes/fonts
+block append meta
+  meta(
+    name='description',
+    content='Keepsake is an independent digital and branding studio. Explore our work, services and journal.'
+  )
+  meta(property='og:title', content='Keepsake — Digital & Branding Studio')
 
-append meta
-    include ../includes/meta
+block title
+  title Keepsake — Digital & Branding Studio
 
 block data
-    include ../data/data
-
-block header
-    include ../components/header
+  include ../data/navigation.pug
+  include ../data/categories.pug
+  include ../data/works.pug
+  include ../data/services.pug
+  include ../data/stats.pug
+  include ../data/clients.pug
+  include ../data/journal.pug
+  include ../data/footerColumns.pug
+  include ../data/socials.pug
 
 block content
-    include ../components/content
-
-block footer
-    include ../components/footer
+  include ../components/sections/hero.pug
+  include ../components/sections/works.pug
+  include ../components/sections/cta.pug
+  include ../components/sections/services.pug
+  include ../components/sections/clients.pug
+  include ../components/sections/journal.pug

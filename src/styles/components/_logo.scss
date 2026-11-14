@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+.logo {
+  font: 700 var(--logo-size) / 1 var(--font-logo);
+  color: var(--color-text-dark);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.logo > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--logo-circle);
+  height: var(--logo-circle);
+  border-radius: var(--round);
+  background: var(--color-text-dark);
+  color: var(--color-white);
+}
+
+.logo svg {
+  width: rem(24px);
+}

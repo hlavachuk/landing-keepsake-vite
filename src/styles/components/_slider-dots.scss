@@ -1,0 +1,36 @@
+.slider-dots {
+  display: flex;
+  gap: var(--space-xs);
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+.slider-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--round);
+  background: var(--color-border);
+}
+
+.slider-dots .selected {
+  background: var(--color-accent);
+}
+
+.slider-dots {
+  justify-content: flex-end;
+}
+
+.slider-dots span {
+  width: 8px;
+  height: 3px;
+  border-radius: 0;
+}
+
+.slider-dots .selected {
+  width: 24px;
+}
+
+.slider-dots {
+  flex-shrink: 0;
+  margin-left: auto;
+}

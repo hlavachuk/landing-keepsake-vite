@@ -1,0 +1,10 @@
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-right: 0;
+}
+
+.testimonial-author small {
+  color: var(--color-muted);
+}

@@ -1,0 +1,37 @@
+.mobile-menu {
+  position: fixed;
+  inset: 0 0 auto;
+  width: 100%;
+  max-height: 100dvh;
+  overflow: auto;
+  margin: 0;
+  padding: var(--space-lg) var(--gutter) var(--space-xl);
+  border: 0;
+  background: var(--color-white);
+  color: var(--color-text);
+}
+
+.mobile-menu::backdrop {
+  background: var(--color-overlay);
+}
+
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu nav a {
+  padding: var(--space-md) 0;
+  border-bottom: var(--border);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: var(--ui-tracking);
+}
+
+.mobile-menu p {
+  margin-bottom: var(--space-xs);
+}
+
+.mobile-menu .socials {
+  margin-top: var(--space-lg);
+}

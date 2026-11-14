@@ -1,0 +1,22 @@
+.detail-content {
+  max-width: 720px;
+  margin: var(--space-lg) auto;
+  background: var(--color-white);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.detail-content > img {
+  width: 100%;
+  height: auto;
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+.detail-content h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.3;
+}

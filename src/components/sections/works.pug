@@ -1,0 +1,24 @@
+section#works.section.container.portfolio(aria-labelledby='works-title')
+  h2#works-title.section-title= 'Our awesome works'
+  each category, i in categories
+    input.visually-hidden.filter-radio(
+      type='radio',
+      id=`filter-${category.key}`,
+      name='portfolio',
+      checked=i === 0,
+      aria-label=`${category.label} works`
+    )
+  .filters(role='group', aria-label='Filter portfolio')
+    each category in categories
+      label(for=`filter-${category.key}`)= category.label
+  input#more-works.visually-hidden(
+    type='checkbox',
+    aria-label='Show all portfolio works'
+  )
+  .work-grid
+    each work in works
+      +work-card(work)
+  label.button.secondary.load-more(for='more-works')
+    span.more-label= 'Load more works'
+    span.less-label= 'Show fewer works'
+  p.filter-empty= 'Explore another category to discover more work.'

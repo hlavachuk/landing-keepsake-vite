@@ -1,0 +1,23 @@
+mixin icon(name)
+  case name
+    when 'web-design'
+    when 'motion-video'
+    when 'print-design'
+    when 'illustration'
+      svg(viewBox='0 0 24 24', width='32', height='32', aria-hidden='true')
+        use(href=`#icon-${name}`)
+    when 'logo'
+      svg(viewBox='0 0 32 32', width='24', height='24', aria-hidden='true')
+        use(href='#icon-logo')
+    default
+      - const size = name.startsWith('pinterest') ? 20 : 22;
+      svg(
+        viewBox='0 0 24 24',
+        width=size,
+        height=size,
+        fill='none',
+        stroke='currentColor',
+        stroke-width='1.5',
+        aria-hidden='true'
+      )
+        use(href=`#icon-${name}`)

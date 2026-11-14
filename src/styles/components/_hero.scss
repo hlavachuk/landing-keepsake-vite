@@ -1,0 +1,20 @@
+.hero {
+  background: var(--color-bg-light);
+  padding-block: var(--section-space);
+}
+
+.hero h1 {
+  font: 300 var(--hero-size) / 1.25 var(--font-heading);
+  letter-spacing: var(--heading-tracking);
+  text-transform: uppercase;
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.hero h1 {
+  margin-top: 0;
+  max-width: none;
+}
+
+.hero p {
+  font-size: 14px;
+}

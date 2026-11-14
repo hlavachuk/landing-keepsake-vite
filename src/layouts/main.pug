@@ -1,21 +1,28 @@
+include ../mixins/btn.pug
+include ../mixins/icon.pug
+include ../mixins/picture.pug
+include ../mixins/work-card.pug
+
 doctype html
-html(lang="en")
-    head
-        block meta
-            meta(charset="utf-8")
-            meta(name="viewport" content="width=device-width, initial-scale=1")
-        block title
-            title Vite Pug Template
-        block fonts
-        block main-scripts
-        block styles
-            link(rel="stylesheet" href="/src/styles/main.scss")
-    body
-        block data
-        block header
-            header.page-header header
-        block content
-            main.page-main content
-        block footer
-            footer.page-footer footer
-        block add-scripts
+html(lang='en')
+  head
+    block meta
+      meta(charset='UTF-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+    block title
+      title Keepsake
+    include ../includes/fonts.pug
+    block styles
+      link(rel='stylesheet', href='/src/styles/main.scss')
+  body
+    block data
+    a.skip-link(href='#main') Skip to content
+    include ../includes/icons.pug
+    include ../components/header.pug
+    include ../components/mobile-menu.pug
+    main#main
+      block content
+    include ../components/footer.pug
+    include ../components/back-top.pug
+    include ../components/sections/details.pug
+    block scripts

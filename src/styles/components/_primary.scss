@@ -1,0 +1,8 @@
+.primary {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.primary:hover {
+  background: var(--color-accent-hover);
+}

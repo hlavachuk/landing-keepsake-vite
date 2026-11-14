@@ -1,5 +1,37 @@
-footer.footer
-    .footer-outer
-        .footer-inner
-            include logo
-            h4 Приєднуйся і живи зі мною у світі солодощів!
+footer#contact.site-footer
+  .container
+    .footer-top
+      .footer-links
+        each column in footerColumns
+          div
+            h2= column.title
+            each link in column.links
+              a(href=link.href)= link.label
+      .newsletter
+        h2= 'Newsletter'
+        p= 'Fresh case studies and design notes, once a month.'
+        form(action='#subscribed', method='get')
+          .subscribe-fields
+            label.visually-hidden(for='email')= 'Email address'
+            input#email(
+              type='email',
+              placeholder='Your email address',
+              required,
+              aria-describedby='email-error'
+            )
+            button.button.primary(type='submit')= 'Subscribe'
+            p#email-error.error= 'Please enter a valid email address.'
+          label.consent
+            input(type='checkbox', required)
+            = ' I agree to receive studio updates.'
+          p.form-note= 'Demo only. Your email is not sent or stored.'
+        #subscribed.success(role='status')
+          strong= 'Thank you for stopping by!'
+          p= 'Your subscription has been demonstrated successfully. No email was sent.'
+          a(href='#contact')= 'Back to the studio'
+    .footer-bottom
+      p= '© 2026 Keepsake. Educational layout.'
+      .socials
+        each social in socials
+          a(href=social.href, aria-label=social.label)
+            +icon(social.icon)

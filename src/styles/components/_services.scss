@@ -1,0 +1,24 @@
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  padding-top: var(--space-md);
+}
+
+.services article {
+  flex: 1 1 calc(50% - var(--space-lg));
+  text-align: center;
+  min-width: 0;
+}
+
+.services h3,
+.journal-card h3 {
+  font: 400 var(--section-size) / 1.4 var(--font-heading);
+  letter-spacing: var(--ui-tracking);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.services p {
+  font-size: var(--body-size);
+}

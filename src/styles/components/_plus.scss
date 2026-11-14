@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+.plus {
+  @include flex-center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: var(--round);
+  background: var(--color-teal);
+  color: var(--color-white);
+}

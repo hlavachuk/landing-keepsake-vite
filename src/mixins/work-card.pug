@@ -1,0 +1,11 @@
+mixin work-card(work)
+  article.work-card(data-category=work.category)
+    h3.visually-hidden= work.title
+    a(href=work.href, aria-label=`View ${work.title}`)
+      +picture(work.image, work.alt, 720, 570).work-card__image
+      span.work-overlay
+        span.plus
+          +icon('plus')
+        strong= work.title
+        span.accent-line
+        span.category= work.label

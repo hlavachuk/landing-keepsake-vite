@@ -1,0 +1,10 @@
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: var(--space-lg);
+  border-top: 1px solid var(--color-text);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  font-size: var(--nav-size);
+}

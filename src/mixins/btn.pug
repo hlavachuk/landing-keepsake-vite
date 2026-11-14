@@ -1,0 +1,6 @@
+mixin btn(label, href, variant = 'primary')
+  a.button(class=variant, href=href)&attributes(attributes)
+    if block
+      block
+    else
+      = label

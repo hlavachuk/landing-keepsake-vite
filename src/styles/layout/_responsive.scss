@@ -1,0 +1,263 @@
+@use '../abstracts' as *;
+
+@include mq(md) {
+  :root {
+    --section-space: 72px;
+    --gutter: 40px;
+    --header-height: 90px;
+    --hero-size: 32px;
+    --cta-size: 24px;
+    --quote-size: 19px;
+    --stat-size: 40px;
+    --nav-size: 13px;
+    --logo-size: 26px;
+    --logo-circle: 40px;
+    --service-circle: 96px;
+    --preview-size: 150px;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    font: 400 var(--nav-size) / 1.5 var(--font-heading);
+    letter-spacing: var(--ui-tracking);
+    text-transform: uppercase;
+  }
+
+  .desktop-nav > a:hover {
+    color: var(--color-accent);
+  }
+
+  .desktop-nav .favourite:hover {
+    color: var(--color-white);
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    gap: var(--space-md);
+  }
+
+  .desktop-break {
+    display: block;
+  }
+
+  .filters {
+    overflow: visible;
+    margin-right: 0;
+    margin-block: var(--space-lg) var(--space-md);
+    padding-left: 0;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .work-card > a {
+    aspect-ratio: 1/0.79;
+  }
+
+  [id="filter-all"]:checked ~ .work-grid .work-card:nth-child(-n/**/+8) {
+    display: block;
+  }
+
+  [id="filter-all"]:checked ~ .work-grid .work-card:nth-child(n/**/+9) {
+    display: none;
+  }
+
+  .load-more {
+    width: max-content;
+  }
+
+  .services {
+    gap: var(--space-xl);
+  }
+
+  .stats > div {
+    flex-basis: 25%;
+  }
+
+  .client-logos span {
+    flex-basis: 33.333%;
+  }
+
+  .testimonial {
+    padding: var(--space-2xl);
+  }
+
+  .journal-card {
+    gap: var(--space-lg);
+  }
+
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
+
+  .footer-links {
+    flex: 1;
+  }
+
+  .newsletter {
+    order: 0;
+    flex: 1.2;
+    max-width: 440px;
+  }
+
+  .subscribe-fields {
+    flex-flow: row wrap;
+  }
+
+  .subscribe-fields input {
+    flex: 1 1 180px;
+    width: 0;
+  }
+
+  .subscribe-fields .error {
+    flex-basis: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mobile-menu {
+    max-width: 480px;
+  }
+
+  .hero .container {
+    max-width: var(--container);
+  }
+}
+
+@include mq(lg) {
+  :root {
+    --section-space: 90px;
+    --gutter: 90px;
+    --hero-size: 40px;
+    --cta-size: 28px;
+    --quote-size: 22px;
+    --stat-size: 48px;
+    --grid-gap: 14px;
+  }
+
+  .hero {
+    padding-block: var(--section-space);
+  }
+
+  .hero h1 {
+    max-width: 850px;
+  }
+
+  .desktop-nav {
+    gap: var(--space-xl);
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  [id='filter-all']:checked ~ .work-grid .work-card:nth-child(n) {
+    display: block;
+  }
+
+  .services article {
+    flex-basis: calc(25% - var(--space-xl));
+  }
+
+  .client-logos span {
+    flex-basis: 16.666%;
+  }
+
+  .journal-card {
+    flex-basis: calc(50% - var(--space-md));
+  }
+
+  .testimonial {
+    padding: var(--space-3xl);
+  }
+
+  .footer-links {
+    max-width: 440px;
+  }
+}
+
+@media (hover: none) {
+  .work-overlay {
+    justify-content: flex-end;
+    align-items: flex-start;
+    opacity: 1;
+    background: linear-gradient(transparent 45%, var(--color-overlay));
+    padding: var(--space-md);
+    gap: var(--space-xs);
+  }
+
+  .work-overlay .plus,
+  .work-overlay .accent-line {
+    display: none;
+  }
+
+  .work-overlay strong {
+    font-size: var(--body-size);
+  }
+}
+
+@include mq(md) {
+  .slider-dots {
+    position: absolute;
+    right: 48px;
+    bottom: 60px;
+  }
+
+  .hero-actions {
+    margin-top: 24px;
+  }
+}
+
+@include mq(lg) {
+  .portfolio > .section-title {
+    position: absolute;
+    top: calc(var(--section-space) + 8px);
+  }
+
+  .portfolio > .filters {
+    justify-content: flex-end;
+    margin-top: 0;
+    padding-bottom: 24px;
+  }
+
+  .hero {
+    padding-block: 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root *,
+  :root *::before,
+  :root *::after {
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+figcaption {
+  flex-wrap: wrap;
+
+  @include mq(md) {
+    flex-wrap: nowrap;
+  }
+}
+
+.slider-dots {
+  flex-basis: 100%;
+
+  @include mq(md) {
+    flex-basis: auto;
+  }
+}

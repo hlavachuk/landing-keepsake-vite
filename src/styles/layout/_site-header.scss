@@ -1,0 +1,8 @@
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  height: var(--header-height);
+  background: var(--color-white);
+  border-bottom: var(--border);
+}

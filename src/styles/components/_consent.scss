@@ -1,0 +1,12 @@
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+  font-size: var(--nav-size);
+}
+
+.consent input {
+  margin-top: 4px;
+  accent-color: var(--color-teal);
+}

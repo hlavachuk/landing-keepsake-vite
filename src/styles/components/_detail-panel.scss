@@ -1,0 +1,13 @@
+.detail-panel {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay);
+  z-index: 30;
+  overflow: auto;
+  padding: var(--space-lg);
+}
+
+.detail-panel:target {
+  display: block;
+}
