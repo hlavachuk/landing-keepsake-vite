@@ -3,8 +3,8 @@
   color: var(--color-teal);
   padding: var(--space-lg);
   border: 1px solid var(--color-teal);
-}
 
-.success:target {
-  display: block;
+  &:target {
+    display: block;
+  }
 }

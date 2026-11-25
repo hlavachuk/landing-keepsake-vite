@@ -3,12 +3,12 @@
   flex-wrap: wrap;
   gap: var(--space-lg);
   padding-top: var(--space-md);
-}
 
-.services article {
-  flex: 1 1 calc(50% - var(--space-lg));
-  text-align: center;
-  min-width: 0;
+  & article {
+    flex: 1 1 calc(50% - var(--space-lg));
+    text-align: center;
+    min-width: 0;
+  }
 }
 
 .services h3,
@@ -19,6 +19,8 @@
   margin-bottom: var(--space-sm);
 }
 
-.services p {
-  font-size: var(--body-size);
+.services {
+  & p {
+    font-size: var(--body-size);
+  }
 }

@@ -5,24 +5,24 @@
   border-block: var(--border);
   padding-block: var(--space-xl);
   row-gap: var(--space-xl);
-}
 
-.stats > div {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column-reverse;
-  text-align: center;
-}
+  & > div {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 
-.stats dd {
-  margin: 0 0 var(--space-xs);
-  font: 300 var(--stat-size) / 1.2 var(--font-heading);
-  color: var(--color-text-dark);
-}
+  & dd {
+    margin: 0 0 var(--space-xs);
+    font: 300 var(--stat-size) / 1.2 var(--font-heading);
+    color: var(--color-text-dark);
+  }
 
-.stats dt {
-  font: 400 var(--nav-size) / 1.5 var(--font-heading);
-  text-transform: uppercase;
-  letter-spacing: var(--ui-tracking);
-  color: var(--color-muted);
+  & dt {
+    font: 400 var(--nav-size) / 1.5 var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: var(--ui-tracking);
+    color: var(--color-muted);
+  }
 }

@@ -6,8 +6,8 @@
   justify-content: center;
   background: var(--color-accent);
   color: var(--color-white);
-}
 
-.favourite:hover {
-  background: var(--color-accent-hover);
+  &:hover {
+    background: var(--color-accent-hover);
+  }
 }

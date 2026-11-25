@@ -1,91 +1,23 @@
 @use '../abstracts' as *;
 
-[id='filter-all']:checked ~ .filters label[for='filter-all'] {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-white);
-}
+@each $category in $work-categories {
+  [id='filter-#{$category}'] {
+    &:checked ~ .filters label[for='filter-#{$category}'] {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-white);
+    }
 
-[id='filter-all']:focus-visible ~ .filters label[for='filter-all'] {
-  @include focus-ring;
-}
+    &:focus-visible ~ .filters label[for='filter-#{$category}'] {
+      @include focus-ring;
+    }
 
-[id='filter-branding']:checked ~ .filters label[for='filter-branding'] {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-white);
-}
-
-[id='filter-branding']:focus-visible ~ .filters label[for='filter-branding'] {
-  @include focus-ring;
-}
-
-[id='filter-branding']:checked
-  ~ .work-grid
-  .work-card:not([data-category='branding']) {
-  display: none;
-}
-
-[id='filter-identity']:checked ~ .filters label[for='filter-identity'] {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-white);
-}
-
-[id='filter-identity']:focus-visible ~ .filters label[for='filter-identity'] {
-  @include focus-ring;
-}
-
-[id='filter-identity']:checked
-  ~ .work-grid
-  .work-card:not([data-category='identity']) {
-  display: none;
-}
-
-[id='filter-print']:checked ~ .filters label[for='filter-print'] {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-white);
-}
-
-[id='filter-print']:focus-visible ~ .filters label[for='filter-print'] {
-  @include focus-ring;
-}
-
-[id='filter-print']:checked
-  ~ .work-grid
-  .work-card:not([data-category='print']) {
-  display: none;
-}
-
-[id='filter-web']:checked ~ .filters label[for='filter-web'] {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-white);
-}
-
-[id='filter-web']:focus-visible ~ .filters label[for='filter-web'] {
-  @include focus-ring;
-}
-
-[id='filter-web']:checked ~ .work-grid .work-card:not([data-category='web']) {
-  display: none;
-}
-
-[id='filter-motion']:checked ~ .filters label[for='filter-motion'] {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: var(--color-white);
-}
-
-[id='filter-motion']:focus-visible ~ .filters label[for='filter-motion'] {
-  @include focus-ring;
-}
-
-[id='filter-motion']:checked
-  ~ .work-grid
-  .work-card:not([data-category='motion']) {
-  display: none;
+    @if $category != all {
+      &:checked ~ .work-grid .work-card:not([data-category='#{$category}']) {
+        display: none;
+      }
+    }
+  }
 }
 
 [id="filter-all"]:checked ~ .work-grid .work-card:nth-child(n/**/+6) {
@@ -115,10 +47,10 @@
 
 .portfolio {
   position: relative;
-}
 
-.portfolio > .section-title {
-  margin-bottom: 24px;
+  & > .section-title {
+    margin-bottom: 24px;
+  }
 }
 
 [id='more-works']:checked ~ .work-grid .work-card:nth-child(n) {

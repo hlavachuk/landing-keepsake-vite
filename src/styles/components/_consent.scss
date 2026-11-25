@@ -4,9 +4,9 @@
   gap: var(--space-xs);
   margin-top: var(--space-md);
   font-size: var(--nav-size);
-}
 
-.consent input {
-  margin-top: 4px;
-  accent-color: var(--color-teal);
+  & input {
+    margin-top: 4px;
+    accent-color: var(--color-teal);
+  }
 }

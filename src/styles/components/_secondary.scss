@@ -2,9 +2,9 @@
   background: transparent;
   border-color: var(--color-border);
   color: var(--color-text-dark);
-}
 
-.secondary:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
+  &:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
 }

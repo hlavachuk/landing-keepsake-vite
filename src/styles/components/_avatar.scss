@@ -1,16 +1,12 @@
+@use '../abstracts' as *;
+
 .avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
+
   width: 44px;
   height: 44px;
   border-radius: var(--round);
-  background: var(--color-border);
-  color: var(--color-text-dark);
   font-family: var(--font-heading);
-}
-
-.avatar {
   background: var(--color-teal);
   color: white;
   flex-shrink: 0;

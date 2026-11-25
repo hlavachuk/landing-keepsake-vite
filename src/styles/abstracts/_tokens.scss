@@ -1,3 +1,5 @@
+@use 'functions' as f;
+
 $colors: (
   'accent': #f95858,
   'accent-hover': #e44646,
@@ -23,7 +25,7 @@ $hero-size: 26px;
 $cta-size: 22px;
 $quote-size: 16px;
 $stat-size: 38px;
-$nav-size: 12px;
+$nav-size: f.rem(12px);
 $logo-size: 22px;
 $logo-circle: 34px;
 $service-circle: 72px;
@@ -38,8 +40,8 @@ $space-3xl: 48px;
 $heading-tracking: 3px;
 $section-tracking: 1.5px;
 $ui-tracking: 1px;
-$section-size: 18px;
-$body-size: 14px;
+$section-size: f.rem(18px);
+$body-size: f.rem(14px);
 $body-leading: 22px;
 $section-mark: 16px;
 $mark-height: 2px;
@@ -50,3 +52,4 @@ $breakpoints: (
   md: 768px,
   lg: 1280px,
 );
+$work-categories: all, branding, identity, print, web, motion;

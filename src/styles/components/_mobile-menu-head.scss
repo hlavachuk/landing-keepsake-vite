@@ -1,14 +1,15 @@
+@use '../abstracts' as *;
+
 .mobile-menu-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: var(--space-lg);
-}
 
-.mobile-menu-head button {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  & button {
+    width: 40px;
+    height: 40px;
+
+    @include flex-center;
+  }
 }

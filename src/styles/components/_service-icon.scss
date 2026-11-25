@@ -1,24 +1,25 @@
+@use '../abstracts' as *;
+
 .service-icon {
   width: var(--service-circle);
   height: var(--service-circle);
   border-radius: var(--round);
   background: var(--color-bg-light);
   margin: 0 auto var(--space-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.service-icon svg {
-  width: 32px;
-  height: 32px;
-  color: var(--color-text-dark);
-}
+  @include flex-center;
 
-.service-icon svg {
-  stroke: var(--color-muted);
-}
+  & svg {
+    width: 32px;
+    height: 32px;
+    color: var(--color-text-dark);
+  }
 
-.service-icon svg {
-  stroke: none;
+  & svg {
+    stroke: var(--color-muted);
+  }
+
+  & svg {
+    stroke: none;
+  }
 }

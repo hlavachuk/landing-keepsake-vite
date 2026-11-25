@@ -1,13 +1,13 @@
 .footer-links {
   display: flex;
   gap: var(--space-3xl);
-}
 
-.footer-links > div {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: var(--space-xs);
+  & > div {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
 }
 
 .footer-links a:hover,

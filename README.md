@@ -59,6 +59,18 @@ Husky запускає lint-staged перед комітом. GitHub Actions п�
 
 ### Завдання 3. SCSS
 
+SCSS містить вкладені селектори та стани через `&`, а не лише CSS із розширенням `.scss`. Функція `rem()` використовується для базових розмірів шрифтів у токенах. Міксин `flex-center($display: flex)` застосовується до кнопок, соціальних посилань та іконок; `focus-ring($offset: 3px)` — до елементів керування. Правила шести фільтрів портфоліо генеруються одним `@each` зі списку `$work-categories`, інтерполяцією `#{$category}` та умовою `@if`.
+
+Для показу на захисті:
+
+- [abstracts/_functions.scss](src/styles/abstracts/_functions.scss) і [abstracts/_tokens.scss](src/styles/abstracts/_tokens.scss): визначення та використання `rem()`.
+- [abstracts/_mixins.scss](src/styles/abstracts/_mixins.scss) і [components/_button.scss](src/styles/components/_button.scss): міксин із параметром за замовчуванням та його виклик.
+- [components/_portfolio.scss](src/styles/components/_portfolio.scss): цикл, умова та інтерполяція.
+- [components/_work-card.scss](src/styles/components/_work-card.scss): `&__image`, вкладені дочірні селектори й стани.
+- [layout/_responsive.scss](src/styles/layout/_responsive.scss): `@include mq(md)` та `@include mq(lg)`.
+
+Браузер отримує звичайний CSS після компіляції Sass — це очікуваний результат. Вихідні можливості SCSS потрібно показувати у `src/styles`, а не у зібраному `dist`.
+
 | Файл / папка                                                                 | Призначення                                              |
 | ---------------------------------------------------------------------------- | -------------------------------------------------------- |
 | [src/styles/main.scss](src/styles/main.scss)                                 | Єдина точка входу стилів, підключення через @use.        |

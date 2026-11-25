@@ -3,12 +3,12 @@
   color: var(--color-muted);
   margin-top: var(--section-space);
   padding: var(--space-3xl) 0 var(--space-lg);
-}
 
-.site-footer h2 {
-  font: 400 var(--section-size) / 1.5 var(--font-heading);
-  color: var(--color-white);
-  text-transform: uppercase;
-  letter-spacing: var(--section-tracking);
-  margin-bottom: var(--space-md);
+  & h2 {
+    font: 400 var(--section-size) / 1.5 var(--font-heading);
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: var(--section-tracking);
+    margin-bottom: var(--space-md);
+  }
 }

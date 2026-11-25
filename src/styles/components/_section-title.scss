@@ -5,11 +5,11 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-}
 
-.section-title::after {
-  content: '';
-  width: var(--section-mark);
-  height: var(--mark-height);
-  background: var(--color-accent);
+  &::after {
+    content: '';
+    width: var(--section-mark);
+    height: var(--mark-height);
+    background: var(--color-accent);
+  }
 }

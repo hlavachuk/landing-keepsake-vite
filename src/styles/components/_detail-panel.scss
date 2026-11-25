@@ -6,8 +6,8 @@
   z-index: 30;
   overflow: auto;
   padding: var(--space-lg);
-}
 
-.detail-panel:target {
-  display: block;
+  &:target {
+    display: block;
+  }
 }

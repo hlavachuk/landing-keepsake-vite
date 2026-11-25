@@ -1,14 +1,15 @@
+@use '../abstracts' as *;
+
 .socials {
   display: flex;
   gap: var(--space-xs);
-}
 
-.socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: 1px solid currentcolor;
-  border-radius: var(--round);
+  & a {
+    @include flex-center;
+
+    width: 36px;
+    height: 36px;
+    border: 1px solid currentcolor;
+    border-radius: var(--round);
+  }
 }

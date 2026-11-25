@@ -1,11 +1,11 @@
 .newsletter {
   order: -1;
-}
 
-.newsletter > p {
-  margin-bottom: var(--space-md);
-}
+  & > p {
+    margin-bottom: var(--space-md);
+  }
 
-.newsletter:has(.success:target) form {
-  display: none;
+  &:has(.success:target) form {
+    display: none;
+  }
 }
